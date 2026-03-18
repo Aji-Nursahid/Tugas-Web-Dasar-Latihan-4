@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran Crew Astral Express</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url(src/Background_Planet.jpg); 
+        color: #333;
+    }
+    
+    .container {
+        width: 600px;
+        margin: 40px auto;
+        background: rgba(0,0,0,0.6);
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid rgba(155,92,255,0.3);
+        box-shadow: 0 0 20px rgba(155,92,255,0.4);
+    }
+
+    h2 {
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 5px;
+        text-shadow: 0 0 10px #9b5cff, 0 0 20px #4fc3f7;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    p  {
+        text-align: center;
+        font-size: 13px;
+        color: #d1c4ff;
+        text-shadow: 0 0 5px #9b5cff;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    td {
+        padding: 8px 0;
+        vertical-align: top;
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(155,92,255,0.5);
+    }
+    
+    td strong {
+        color: #e0d4ff;
+    }
+    
+	th {
+        padding: 8px 0;
+        vertical-align: top;
+        color: #e0d4ff;
+        text-shadow: 0 0 5px rgba(155,92,255,0.5);
+    }
+	
+    input[type="text"], select, textarea {
+        width: 95%; 
+        padding: 8px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.15);
+        color: rgba(255,255,255,0.6);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    input[type="date"], select, textarea {
+        width: 95%; 
+        padding: 8px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.15);
+        color: rgba(255,255,255,0.6);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+    
+    input::placeholder, textarea::placeholder {
+        color: rgba(255,255,255,0.6);
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        accent-color: #9b5cff;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border: 1px solid #9b5cff;
+        box-shadow: 0 0 10px #9b5cff;
+        background: rgba(255,255,255,0.2);
+        color: #000000;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .btn-submit { background: linear-gradient(45deg, #9b5cff, #4fc3f7); box-shadow: 0 0 10px #9b5cff; margin-right: 50px; margin-left: 50px;}
+    
+    hr {
+        margin: 30px 0;
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #9b5cff, #ffd700, transparent);
+        box-shadow: 0 0 10px #9b5cff;
+    }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="text-align: center;">
+        <svg width="80" height="80">
+            <circle cx="40" cy="40" r="35" stroke="#9b5cff" stroke-width="3" fill="none"/>
+             <image href="src/Logo Astral Express.png" x="0" y="0" width="80" height="80"/>
+        </svg>
+    </div>
+
+    <h2>ASTRAL EXPRESS CREW REGISTER FORM</h2>
+    <p>The galaxy is vast beyond compare, containing an infinite number of possibilities.</p>
+    
+    <hr>
+    
+    <div style="text-align:center;">
+        <img src=src/honkaistarrail-train.gif style="width:500px;">
+    </div>
+
+    <form action="#" method="POST">
+        <p style="text-align:justify;">
+        Astral Express adalah kereta antarbintang yang dirancang untuk menempuh perjalanan melintasi berbagai dimensi dan galaksi. Kereta ini memiliki kemampuan untuk menghubungkan planet-planet yang berjauhan serta alam-alam yang sulit dijangkau oleh transportasi konvensional.
+
+        Fasilitas dan struktur kereta dirancang untuk mendukung kenyamanan dan keselamatan penumpang, termasuk manusia maupun makhluk kosmik, selama menempuh perjalanan antardimensi. Sistem propulsi dan navigasi memanfaatkan prinsip fisika antarplanet dan teknologi manipulasi ruang-waktu untuk mencapai kecepatan tinggi tanpa mengorbankan stabilitas.
+
+        Astral Express berfungsi sebagai sarana eksplorasi dan penelitian, memungkinkan penumpang untuk mengamati fenomena alam semesta, interaksi antarplanet, serta berbagai bentuk kehidupan yang unik. Kereta ini juga memfasilitasi interaksi sosial dan pertukaran informasi antarpenumpang dari latar yang beragam, sehingga perjalanan menjadi pengalaman ilmiah sekaligus edukatif.
+        </p>
+        
+        <hr>
+        
+        <table>
+		<tr>
+			<td><strong>I. Data Diri</strong></td>
+		</tr>
+        <tr>
+                <td><strong>Nama Lengkap</strong></td>
+                <td width="5%">:</td> <td><input type="text" name="nama" placeholder="Masukkan nama" required></td>
+        </tr>
+			
+		    <tr>
+                <td><strong>Tempat Tanggal Lahir</strong></td>
+                <td>:</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" name="TL" placeholder="Masukkan tempat lahir" required style="width: 50%;">
+                        <input type="date" name="tgl_lahir" style="width: 45%;">
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><strong>No Kartu ID</strong></td>
+                <td>:</td>
+                <td><input type="text" name="ID_Card" placeholder="Contoh: 652789154" required></td>
+            </tr>
+
+            <tr>
+                <td><strong>Alamat Lengkap</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Address" placeholder="Contoh: Jl.Hampstead No.172" required></td>
+            </tr>
+    
+
+            <tr>
+                <td><strong>No Handphone</strong></td>
+                <td>:</td>
+                <td><input type="text" name="No_HP" placeholder="Contoh: +6264345219856" required></td>
+            </tr>
+            
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Email" placeholder="Masukkan email" required></td>
+            </tr>
+            
+            <tr>
+                <td><strong>Jenis Kelamin</strong></td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="gender" value="Pria"> Pria
+                    <input type="radio" name="gender" value="Wanita"> Wanita
+                </td>
+            </tr>
+            
+            <td><strong>II. Latar Belakang Pendidikan</strong></td>
+
+            <tr>
+                <td><strong>Nama Institusi</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Coll" placeholder="Masukkan nama institusi" required></td>
+            </tr>
+
+            <tr>
+                <td><strong>Jurusan & Tahun Lulus</strong></td>
+                <td>:</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <select name="prodi">
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="TI">Teknik Informatika</option>
+                            <option value="TMJ">Teknik Multimedia Jaringan</option>
+                            <option value="TD">Teknik Dirgantara</option>
+                            <option value="TM">Teknik Mesin</option>
+                            <option value="AST">Astronomi</option>
+                            <option value="CHEM">Teknik Kimia</option>
+                            <option value="PHY">Teknik Fisika</option>
+                            <option value="BIO">Biologi</option>
+                            <option value="Oth">Lainnya</option>
+                        </select>
+                        <select name="Tahun lulus">
+                            <option value="">-- Pilih Tahun Kelulusan --</option>
+                            <option value="26">2025/2026</option>
+                            <option value="25">2024/2025</option>
+                            <option value="24">2023/2024</option>
+                            <option value="23">2022/2023</option>
+                            <option value="22">2021/2022</option>
+                            <option value="21">2020/2021</option>
+                            <option value="Oth">Lainnya</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Lokasi Institusi</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Loc" placeholder="Masukkan lokasi institusi" required></td>
+            </tr>
+
+            <tr>
+			<td><strong>III. Dokumen Pendukung</strong></td>
+		    </tr>
+
+            <tr>
+                <td><strong>Minat Divisi</strong></td>
+                <td>:</td>
+                <td>
+                    <input type="checkbox" name="minat" value="Mechanic"> Mechanic <br>
+                    <input type="checkbox" name="minat" value="Star Gazer"> Star Gazer <br>
+                    <input type="checkbox" name="minat" value="Researcher"> Researcher <br>
+                    <input type="checkbox" name="minat" value="Line Watcher"> Line Watcher <br>
+                    <input type="checkbox" name="minat" value="Engine Driver"> Engine Driver <br>
+                    <input type="checkbox" name="minat" value="Supply Management"> Supply Management
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Alasan Bergabung</strong></td>
+                <td>:</td>
+                <td>
+                    <textarea name="alasan" rows="4" placeholder="Motivasi bergabung dalam perjalanan bintang..."></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Curriculum vitae</strong></td>
+                <td>:</td>
+                <td><input type="file" id="myfile" name="file" placeholder="Masukkan lokasi institusi" required></td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align: center; padding-top: 20px;">
+					<div style="display:flex; justify-content:center; align-items:center;">
+					<button type="submit" class="btn btn-submit">Kirim Formulir</button>
+					</div>
+				</td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+
+    <div style="text-align: center;">
+        <p><strong>Sumpah Crew dengan Tanda Tangan</strong></p>
+        <canvas id="kartuCanvas" width="300" height="150" style="border:1px solid #0056b3; border-radius: 8px;"></canvas>
+        <p>See you on the rail, Comrades!!!</p>
+    </div>
+
+</div>
+
+<script>
+var canvas = document.getElementById("kartuCanvas");
+var ctx = canvas.getContext("2d");
+let drawing = false;
+
+canvas.addEventListener("mousedown", () => drawing = true);
+canvas.addEventListener("mouseup", () => { drawing = false; ctx.beginPath(); });
+canvas.addEventListener("mousemove", draw);
+
+function draw(e){
+    if(!drawing) return;
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#9b5cff";
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+}
+
+ctx.fillStyle = "#0f0f1a";
+ctx.fillRect(0, 0, 300, 150);
+
+ctx.strokeStyle = "rgba(155,92,255,0.8)";
+ctx.lineWidth = 3;
+ctx.shadowColor = "#9b5cff";
+ctx.shadowBlur = 15;
+ctx.strokeRect(0, 0, 300, 150);
+
+let gradient = ctx.createLinearGradient(0, 0, 300, 0);
+gradient.addColorStop(0, "#9b5cff"); 
+gradient.addColorStop(1, "#ffd700"); 
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 300, 40);
+
+ctx.fillStyle = "white";
+ctx.font = "bold 16px Orbitron";
+ctx.fillText("CREW'S SIGNATURE", 60, 25);
+
+ctx.fillStyle = "white";
+ctx.font = "13px Poppins";
+ctx.shadowColor = "#9b5cff";
+ctx.shadowBlur = 8;
+ctx.fillText("Astral Express Crew 2026", 75, 60);
+ctx.shadowBlur = 0;
+</script>
+
+</body>
+</html>
