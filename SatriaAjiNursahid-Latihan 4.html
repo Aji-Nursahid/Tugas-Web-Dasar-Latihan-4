@@ -37,7 +37,7 @@
 
     table {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     td {
@@ -51,12 +51,28 @@
         color: #e0d4ff;
     }
     
+	th {
+        padding: 8px 0;
+        vertical-align: top;
+        color: #e0d4ff;
+        text-shadow: 0 0 5px rgba(155,92,255,0.5);
+    }
+	
     input[type="text"], select, textarea {
         width: 95%; 
         padding: 8px;
         border-radius: 5px;
         background: rgba(255,255,255,0.15);
-        color: #fff;
+        color: rgba(255,255,255,0.6);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    input[type="date"], select, textarea {
+        width: 95%; 
+        padding: 8px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.15);
+        color: rgba(255,255,255,0.6);
         border: 1px solid rgba(255,255,255,0.3);
     }
     
@@ -74,6 +90,7 @@
         border: 1px solid #9b5cff;
         box-shadow: 0 0 10px #9b5cff;
         background: rgba(255,255,255,0.2);
+        color: #000000;
     }
 
     .btn {
@@ -85,9 +102,7 @@
         font-weight: bold;
     }
     
-    .btn-submit { background: linear-gradient(45deg, #9b5cff, #4fc3f7); box-shadow: 0 0 10px #9b5cff; margin-right: 50px; }
-                  
-    .btn-reset {  background: linear-gradient(45deg, #ff4fc3, #ff6b6b); box-shadow: 0 0 10px #ff4fc3; margin-left: 50px;} 
+    .btn-submit { background: linear-gradient(45deg, #9b5cff, #4fc3f7); box-shadow: 0 0 10px #9b5cff; margin-right: 50px; margin-left: 50px;}
     
     hr {
         margin: 30px 0;
@@ -96,6 +111,7 @@
         background: linear-gradient(90deg, transparent, #9b5cff, #ffd700, transparent);
         box-shadow: 0 0 10px #9b5cff;
     }
+
     </style>
 </head>
 <body>
@@ -128,15 +144,42 @@
         <hr>
         
         <table>
-            <tr>
-                <td width="30%"><strong>Nama Lengkap</strong></td>
+		<tr>
+			<td><strong>I. Data Diri</strong></td>
+		</tr>
+        <tr>
+                <td><strong>Nama Lengkap</strong></td>
                 <td width="5%">:</td> <td><input type="text" name="nama" placeholder="Masukkan nama" required></td>
+        </tr>
+			
+		    <tr>
+                <td><strong>Tempat Tanggal Lahir</strong></td>
+                <td>:</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" name="TL" placeholder="Masukkan tempat lahir" required style="width: 50%;">
+                        <input type="date" name="tgl_lahir" style="width: 45%;">
+                    </div>
+                </td>
             </tr>
             
             <tr>
                 <td><strong>No Kartu ID</strong></td>
                 <td>:</td>
                 <td><input type="text" name="ID_Card" placeholder="Contoh: 652789154" required></td>
+            </tr>
+
+            <tr>
+                <td><strong>Alamat Lengkap</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Address" placeholder="Contoh: Jl.Hampstead No.172" required></td>
+            </tr>
+    
+
+            <tr>
+                <td><strong>No Handphone</strong></td>
+                <td>:</td>
+                <td><input type="text" name="No_HP" placeholder="Contoh: +6264345219856" required></td>
             </tr>
             
             <tr>
@@ -153,22 +196,55 @@
                     <input type="radio" name="gender" value="Wanita"> Wanita
                 </td>
             </tr>
+            
+            <td><strong>II. Latar Belakang Pendidikan</strong></td>
 
             <tr>
-                <td><strong>Program Studi</strong></td>
+                <td><strong>Nama Institusi</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Coll" placeholder="Masukkan nama institusi" required></td>
+            </tr>
+
+            <tr>
+                <td><strong>Jurusan & Tahun Lulus</strong></td>
                 <td>:</td>
                 <td>
-                    <select style="color:black; background:white;" name="prodi">
-                        <option value="">-- Pilih Prodi --</option>
-                        <option value="TI">Teknik Informatika</option>
-                        <option value="TMJ">Teknik Multimedia Jaringan</option>
-                        <option value="TD">Teknik Dirgantara</option>
-                        <option value="TM">Teknik Mesin</option>
-                        <option value="AST">Astronomi</option>
-                        <option value="Oth">Lainnya</option>
-                    </select>
+                    <div style="display: flex; gap: 10px;">
+                        <select name="prodi">
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="TI">Teknik Informatika</option>
+                            <option value="TMJ">Teknik Multimedia Jaringan</option>
+                            <option value="TD">Teknik Dirgantara</option>
+                            <option value="TM">Teknik Mesin</option>
+                            <option value="AST">Astronomi</option>
+                            <option value="CHEM">Teknik Kimia</option>
+                            <option value="PHY">Teknik Fisika</option>
+                            <option value="BIO">Biologi</option>
+                            <option value="Oth">Lainnya</option>
+                        </select>
+                        <select name="Tahun lulus">
+                            <option value="">-- Pilih Tahun Kelulusan --</option>
+                            <option value="26">2025/2026</option>
+                            <option value="25">2024/2025</option>
+                            <option value="24">2023/2024</option>
+                            <option value="23">2022/2023</option>
+                            <option value="22">2021/2022</option>
+                            <option value="21">2020/2021</option>
+                            <option value="Oth">Lainnya</option>
+                        </select>
+                    </div>
                 </td>
             </tr>
+
+            <tr>
+                <td><strong>Lokasi Institusi</strong></td>
+                <td>:</td>
+                <td><input type="text" name="Loc" placeholder="Masukkan lokasi institusi" required></td>
+            </tr>
+
+            <tr>
+			<td><strong>III. Dokumen Pendukung</strong></td>
+		    </tr>
 
             <tr>
                 <td><strong>Minat Divisi</strong></td>
@@ -192,10 +268,17 @@
             </tr>
 
             <tr>
+                <td><strong>Curriculum vitae</strong></td>
+                <td>:</td>
+                <td><input type="file" id="myfile" name="file" placeholder="Masukkan lokasi institusi" required></td>
+            </tr>
+
+            <tr>
                 <td colspan="3" style="text-align: center; padding-top: 20px;">
-                    <button type="submit" class="btn btn-submit">Kirim Formulir</button>
-                    <button type="reset" class="btn btn-reset">Kosongkan</button>
-                </td>
+					<div style="display:flex; justify-content:center; align-items:center;">
+					<button type="submit" class="btn btn-submit">Kirim Formulir</button>
+					</div>
+				</td>
             </tr>
         </table>
     </form>
